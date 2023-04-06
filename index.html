@@ -11,9 +11,33 @@
 <body>
     <main>
         <section id="telefone">
-            <iframe src="home.html" frameborder="0" name="telatelefone" id="telatelefone" scrolling="no"></iframe>
-            <a href="" id="botaohome" target="telatelefone"><img src="./imagens/logo-home.jpg" alt=""></a>
+            <div id="status">
+                <img src="./imagens/status-bar.png" alt="">
+                <p id="time"></p>
+
+
+            </div>
+            <iframe src="home.html" frameborder="0" name="telatelefone" id="telatelefone"></iframe>
+            <a href="home.html" id="botaohome" target="telatelefone"><img src="./imagens/logo-home.jpg" alt=""></a>
         </section>
     </main>
+
+    <script>
+            var timeDisplay = document.getElementById("time");
+            function refreshTime() {
+            const data = new Date()
+            var hora = data.getHours();  
+            var minuto = data.getMinutes();
+
+            if(data.getMinutes < 10){
+            timeDisplay.innerHTML = `${hora}:0${minuto}`;
+            }
+            else{
+                timeDisplay.innerHTML = `${hora}:${minuto}`;
+            }
+            }
+
+            setInterval(refreshTime, 1000);
+    </script>
 </body>
 </html>
