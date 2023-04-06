@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-image: url(./imagens/fundohome.webp);
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+
+        #time{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            line-height: 120px;
+            width: 120px;
+            height: 120px;
+            border: 3px solid white;
+            border-radius: 50%;
+        }
+
+        p{  
+            font: 2.5em Arial;
+            color: white;
+            text-align: center;
+        }
+
+        #botoes{
+            text-align: center;
+            transform: translate(0%, 150%);
+        }
+
+        #linha2 a img{
+            margin: 10px;
+            border-radius: 10px;
+            width: 50px;
+            height: auto;
+            box-shadow: 1px 1px 5px black;
+            transform: translate(-72%, 0%);
+        }
+        #botoes > a > img{
+            margin: 10px;
+            border-radius: 10px;
+            width: 50px;
+            height: auto;
+            box-shadow: 1px 1px 5px black;
+        }
+
+        #botoes a:hover{
+            filter: brightness(0.8);
+        }
+    </style>
+</head>
+<body>
+    <p id="time"></p>
+
+    <section id="botoes">
+        <a href="./pagfacebook.html"><img src="./imagens/logo-facebook.jpg" alt=""></a>
+        <a href=""><img src="./imagens/logo-instagram.jpg" alt=""></a>
+        <a href=""><img src="./imagens/logo-github.jpg" alt=""></a><br>
+        <div id="linha2">
+            <a href=""><img src="./imagens/logo-twitter.jpg" alt=""></a>
+            <a href=""><img src="./imagens/logo-youtube.jpg" alt=""></a>
+        <div>
+    </section>
+    
+    <script>
+        var timeDisplay = document.getElementById("time");
+
+
+        function refreshTime() {
+        const data = new Date()
+        var hora = data.getHours();  
+        var minuto = data.getMinutes();
+        
+        if(data.getMinutes < 10){
+        timeDisplay.innerHTML = `${hora}:0${minuto}`;
+        }
+        else{
+            timeDisplay.innerHTML = `${hora}:${minuto}`;
+        }
+        }
+
+        setInterval(refreshTime, 1000);
+    </script>
+</body>
+</html>

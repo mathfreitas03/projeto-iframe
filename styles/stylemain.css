@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url('../imagens/oak-wooden-textured-design-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#telefone{
+    border-radius: 45px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.558);
+    background-color: rgba(59, 59, 59, 0.483);
+    width: 300px;
+    height: 598px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../imagens/frame-iphone.png');
+    background-size: cover;
+}
+
+iframe{
+    background-size: contain;
+    margin-left: 22px;
+    margin-top: 78px;
+    width: 256px;
+    height: 453px;
+}
+
+#botaohome{
+    position: absolute;
+    top: 90%;
+    left: 42%;
+}
+#botaohome img{
+    filter: invert(100%);
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+}
